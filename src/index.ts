@@ -278,8 +278,8 @@ try {
 
   const auth: SshAuth =
     ssh.authMethod === 'password'
-      ? { type: 'password', password: ssh.password! }
-      : { type: 'key', keyPath: ssh.keyPath! }
+      ? { type: 'password', password: ssh.password as string }
+      : { type: 'key', keyPath: ssh.keyPath as string }
 
   await step('Uploading public key to server', (log) =>
     uploadPublicKey(ssh.host, Number(ssh.port), ssh.username, auth, publicKey, log)
