@@ -1,0 +1,41 @@
+{
+  "name": "deploymate",
+  "version": "1.0.0",
+  "description": "Zero-config Docker CI/CD — SSH key setup + GitHub Actions in one command",
+  "type": "module",
+  "bin": {
+    "deploymate": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "cicd",
+    "docker",
+    "github-actions",
+    "deploy",
+    "ssh",
+    "devops"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "axios": "^1.6.0",
+    "chalk": "^5.3.0",
+    "chalk-animation": "^2.0.3",
+    "gradient-string": "^3.0.0",
+    "ssh2": "^1.15.0",
+    "tweetsodium": "^0.0.4"
+  },
+  "devDependencies": {
+    "@types/chalk-animation": "^1.6.3",
+    "@types/gradient-string": "^1.1.6",
+    "@types/node": "^20.10.0",
+    "@types/ssh2": "^1.11.18",
+    "tsx": "^4.6.0",
+    "typescript": "^5.3.2"
+  }
+}
