@@ -1,6 +1,6 @@
 {
   "name": "deploymate-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Zero-config Docker CI/CD — SSH key setup + GitHub Actions in one command",
   "type": "module",
   "bin": {
