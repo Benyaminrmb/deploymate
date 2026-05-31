@@ -291,6 +291,7 @@ try {
       SSH_HOST: ssh.host,
       SSH_PORT: ssh.port,
       SSH_USER: ssh.username,
+      GH_TOKEN: token,
     }, log)
   )
 

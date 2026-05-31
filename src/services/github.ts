@@ -93,15 +93,19 @@ jobs:
           username: \${{ secrets.SSH_USER }}
           port: \${{ secrets.SSH_PORT }}
           key: \${{ secrets.SSH_PRIVATE_KEY }}
+          envs: GH_TOKEN
           script: |
+            REPO_URL="https://x-access-token:\${GH_TOKEN}@github.com/${repo}.git"
             if [ ! -d "${deployPath}/.git" ]; then
-              git clone https://github.com/${repo}.git ${deployPath}
+              git clone "\${REPO_URL}" ${deployPath}
             fi
             cd ${deployPath}
-            git fetch origin
+            git fetch "\${REPO_URL}"
             git reset --hard origin/main
             docker compose down || true
             docker compose -f ${composeFile} up -d --build
+        env:
+          GH_TOKEN: \${{ secrets.GH_TOKEN }}
 `
 }
 
