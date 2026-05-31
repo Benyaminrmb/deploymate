@@ -1,10 +1,11 @@
 {
-  "name": "deploymate",
+  "name": "deploymate-cli",
   "version": "1.0.0",
   "description": "Zero-config Docker CI/CD — SSH key setup + GitHub Actions in one command",
   "type": "module",
   "bin": {
-    "deploymate": "./dist/index.js"
+    "deploymate": "./dist/index.js",
+    "dm": "./dist/index.js"
   },
   "scripts": {
     "dev": "tsx src/index.ts",

@@ -6,7 +6,7 @@ No YAML writing. No manual secret configuration. No SSH key management.
 Fill in 5 fields, press Enter, and every push to `main` auto-deploys to your server.
 
 ```
-npx deploymate
+npx deploymate-cli
 ```
 
 ---
@@ -119,12 +119,12 @@ No password. No manual steps. Fully key-based.
 
 **Run without installing (recommended):**
 ```bash
-npx deploymate
+npx deploymate-cli
 ```
 
 **Install globally:**
 ```bash
-npm install -g deploymate
+npm install -g deploymate-cli
 deploymate
 ```
 
